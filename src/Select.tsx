@@ -3,7 +3,7 @@ import styles from "./select.module.css";
 
 type SelectOption = {
   label: string;
-  value: string | number;
+  value: any;
 };
 
 type SelectProps = {
