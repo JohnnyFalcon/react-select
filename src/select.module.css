@@ -25,6 +25,9 @@ body {
 
 .value {
   flex-grow: 1;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
 }
 
 .clear-btn {
@@ -48,10 +51,16 @@ body {
   width: 0.05em;
 }
 
-.caret {
+.caretUp {
   translate: 0 25%;
   border: 0.25em solid transparent;
   border-top-color: #777;
+}
+
+.caretDown {
+  translate: 0 -25%;
+  border: 0.25em solid transparent;
+  border-bottom-color: #777;
 }
 
 .options {
@@ -87,4 +96,32 @@ body {
 .option.highlighted {
   background-color: hsl(200, 100%, 50%);
   color: white;
+}
+
+.option-badge {
+  display: flex;
+  align-items: center;
+  border: 0.05em solid #777;
+  border-radius: 0.25em;
+  padding: 0.15em 0.25em;
+  gap: 0.25em;
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+
+.option-badge:hover,
+.option-badge:focus {
+  background-color: hsl(0, 100%, 90%);
+  border-color: hsl(0, 100%, 50%);
+}
+
+.option-badge:hover > .remove-btn,
+.option-badge:focus > .remove-btn {
+  color: hsl(0, 100%, 50%);
+}
+
+.option-badge > .remove-btn {
+  font-size: 1.25em;
+  color: #777;
 }
